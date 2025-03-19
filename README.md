@@ -51,18 +51,21 @@ This command overrides any environment variable and runs the server on port `808
 ## Project Structure
 
 ```
-softserve/`
-├── dune-project         # Dune project configuration
-├── public/              # Static assets (HTML, CSS, JS, images)
-│   ├── index.html       # Homepage
-│   ├── about.html       # About page
-│   ├── contact.html     # Contact page
-│   ├── css/             # Custom CSS files
-│   ├── js/              # Custom JavaScript files
-│   └── images/          # Images, logos, favicons, etc.
-└── src/                 # Source code
-    ├── main.ml         # Entry point of the server
-    └── utils.ml        # Utility functions (path mapping, file reading, CLI handling)
+softserve/
+├── bin                    # Contains the main entry point
+│   ├── dune               # The Dune for main
+│   └── main.ml            # Main
+├── dune-project           # The Dune project file
+├── lib                    # The lib folder
+│   ├── cli.ml             # Contains the cli parsing functions
+│   ├── dune               # The Dune for the Softserve library
+│   ├── server.ml          # Contains the server callback and on close
+│   └── utils.ml           # Utility functions
+├── softserve.opam         # The opam file
+└── test                   # Test folder
+    ├── dune               # The Dune for the test project
+    ├── test_softserve.ml  # TODO: integration tests
+    └── utils_tests.ml     # The tests for the utils
 ```
 
 ## Testing

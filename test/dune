@@ -1,0 +1,9 @@
+(tests
+ (names utils_tests ) ; add new files after
+ (libraries 
+   alcotest 
+   lwt 
+   cohttp
+   cohttp-lwt-unix
+   softserve)
+)

@@ -1,0 +1,4 @@
+(executable
+ (public_name softserve)
+ (name main)
+ (libraries softserve))
